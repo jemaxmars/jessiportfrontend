@@ -31,7 +31,7 @@ function MyWork() {
       title: "Spots - Image Sharing Site",
       description:
         "A responsive web application developed as part of the TripleTen Software Engineering Program. This project represents my first fully responsive site, designed with both desktop and mobile users in mind. Built using semantic HTML and modern CSS techniques with Figma for UI/UX planning. Enhanced with JavaScript ES6+, Object-Oriented Programming principles, and asynchronous programming with Fetch API. Features a custom Webpack build setup for optimized asset management and scalable code architecture.",
-      image: "/spotsThumbnail.png?v=" + Date.now(), // Cache busting for updated image
+      image: "/spotsThumbnail.png?v=" + Date.now(), // cache busting for updated image
       techStack: [
         "HTML5",
         "CSS3",
@@ -69,7 +69,7 @@ function MyWork() {
       title: "mkkiamfjuafhbnsuhyfbn",
       description:
         "Interactive jdnvjnvfvand responsive dejhdvbshvjsjcal data visualization.",
-      image: "/api/placeholder/400/250", // Replace with your project image
+      image: "/api/placeholder/400/250",
       techStack: ["JavaScript", "CSS3", "Weather API", "Chart.js"],
       liveLink: "https://your-weather-app.com",
       githubLink: "https://github.com/yourusername/weather-app",

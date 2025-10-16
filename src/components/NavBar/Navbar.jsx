@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav__container">
         <Link to="/" className="nav__logo">
-          Jessi Marie
+          Jessi Marie Codes
         </Link>
         <ul className="nav__menu">
           <li className="nav__item">

@@ -16,12 +16,12 @@
 .my__work h1 {
   color: black;
   margin-bottom: 32px;
+  margin-top: 32px;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--font-neue-montreal);
   font-size: 48px;
   font-weight: 700;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
 }
 
 .my__work-intro {
@@ -31,7 +31,6 @@
   text-transform: uppercase;
   color: black;
   margin-bottom: 48px;
-  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); */
 }
 
 /* Projects Grid */

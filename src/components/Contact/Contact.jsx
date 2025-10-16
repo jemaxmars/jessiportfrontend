@@ -12,7 +12,7 @@ function Contact() {
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/jemaxmars/",
-      icon: "/linkedIcon.png",
+      icon: "/linkedIcon.svg",
       description: "Connect with me professionally",
     },
     {
