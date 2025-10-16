@@ -1,0 +1,136 @@
+.contact {
+  padding: 96px 32px 32px;
+  min-height: 100vh;
+  background-image: url("../../assets/greekAngelStatue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h1 {
+  color: black;
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-neue-montreal);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.contact__intro {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 48px;
+  font-family: var(--font-neue-montreal);
+}
+
+/* Contact Links */
+.contact__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: #282c34;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+}
+
+.contact__link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  border-color: #282c34;
+}
+
+.contact__icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact__link-content {
+  text-align: left;
+  flex: 1;
+}
+
+.contact__link-name {
+  font-family: var(--font-cs-blacken);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  color: #282c34;
+}
+
+.contact__link-description {
+  font-family: var(--font-neue-montreal);
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 16px 16px;
+  }
+
+  .contact h1 {
+    font-size: 36px;
+  }
+
+  .contact__links {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact__link {
+    padding: 20px;
+  }
+
+  .contact__icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+  }
+
+  .contact__link-name {
+    font-size: 16px;
+  }
+
+  .contact__link-description {
+    font-size: 13px;
+  }
+}

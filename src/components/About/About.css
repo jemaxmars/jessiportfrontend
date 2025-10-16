@@ -1,0 +1,27 @@
+.about {
+  padding: 96px 32px 32px;
+  min-height: 100vh;
+  background-image: url("../../assets/greekAngelStatue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  color: black;
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
