@@ -24,13 +24,7 @@
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  /* Gradient text effect */
-  background-image: linear-gradient(
-    to right,
-    white,
-    #474747 50%,
-    #808080 50% 
-  );
+  background-image: linear-gradient(to right, white, #474747 50%, #808080 50%);
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -41,6 +35,11 @@
 
 .nav__logo:hover {
   background-position: 0;
+}
+
+.nav__logo.active {
+  background-position: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .nav__menu {
@@ -59,13 +58,7 @@
   text-transform: uppercase;
   font-size: 45px;
   position: relative;
-  /* Gradient text effect */
-  background-image: linear-gradient(
-    to right,
-    white,
-    #7D7D7D 50%,
-    #808080 50% 
-  );
+  background-image: linear-gradient(to right, white, #7d7d7d 50%, #808080 50%);
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -78,7 +71,11 @@
   background-position: 0;
 }
 
-/* Responsive Design */
+.nav__link.active {
+  background-position: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 768px) {
   .nav__container {
     padding: 0 16px 0 16px;
@@ -105,5 +102,9 @@
   .nav__link::before {
     height: 2px;
     bottom: -2px;
+  }
+
+  .nav__link.active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
 }
