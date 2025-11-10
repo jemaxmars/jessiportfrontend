@@ -83,7 +83,7 @@
   }
 
   .nav__logo {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -95,7 +95,7 @@
   }
 
   .nav__link {
-    font-size: 20px;
+    font-size: 16px;
     font-family: var(--font-neue-montreal);
     line-height: 1;
     white-space: nowrap;
