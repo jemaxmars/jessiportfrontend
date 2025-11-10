@@ -27,22 +27,25 @@
   font-weight: 700;
 }
 
+/* Glassmorphism Card Container */
 .about-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
   padding: 48px;
   max-width: 800px;
   width: 100%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.3s ease;
 }
 
 .about-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.5);
 }
 
 .about-paragraph {
@@ -52,29 +55,34 @@
 .about-paragraph p {
   font-family: var(--font-neue-montreal);
   font-size: 16px;
-  text-transform: uppercase;
   line-height: 1.8;
   color: #282c34;
 }
 
+/* Extra spacer between paragraphs */
 .paragraph-spacer {
   height: 1rem;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .about {
     padding: 80px 16px 16px;
   }
 
   .about h1 {
-    font-size: 50px;
+    font-size: 48px;
     margin-bottom: 24px;
-    margin-top: 50px;
   }
 
   .about-card {
     padding: 32px 24px;
     max-width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .about-card:hover {
+    background: rgba(255, 255, 255, 0.18);
   }
 
   .about-paragraph p {
@@ -89,12 +97,17 @@
   }
 
   .about h1 {
-    font-size: 50px;
+    font-size: 36px;
     margin-bottom: 20px;
   }
 
   .about-card {
     padding: 24px 16px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .about-card:hover {
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .about-paragraph p {
