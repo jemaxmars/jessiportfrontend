@@ -1,7 +1,6 @@
 const GITHUB_USERNAME = "jemaxmars";
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
 
-// Helper function to get cached data
 function getCachedData(key) {
   const cached = localStorage.getItem(key);
   if (!cached) return null;
@@ -14,7 +13,6 @@ function getCachedData(key) {
   return data;
 }
 
-// Helper function to cache data
 function setCachedData(key, data) {
   localStorage.setItem(
     key,
@@ -25,10 +23,8 @@ function setCachedData(key, data) {
   );
 }
 
-// Fetch user repositories
 export async function fetchUserRepos() {
   try {
-    // Don't use cache for now - fetch fresh data
     console.log("Fetching GitHub repos for:", GITHUB_USERNAME);
     const response = await fetch(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10&type=owner`
@@ -41,7 +37,6 @@ export async function fetchUserRepos() {
     const data = await response.json();
     console.log("Full API response:", data);
 
-    // Log first repo to see ALL properties
     if (data.length > 0) {
       console.log(
         "First repo ALL properties:",

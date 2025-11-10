@@ -33,7 +33,6 @@
   margin-bottom: 48px;
 }
 
-/* Projects Grid */
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -41,7 +40,6 @@
   align-items: center;
 }
 
-/* Project Card */
 .project-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -60,7 +58,6 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
-/* Project Image */
 .project-image {
   position: relative;
   width: 100%;
@@ -79,7 +76,6 @@
   transform: scale(1.05);
 }
 
-/* Project Overlay */
 .project-overlay {
   position: absolute;
   top: 0;
@@ -147,9 +143,9 @@
   margin-bottom: 24px;
 }
 
-/* Tech Stack */
 .tech-stack {
   margin-top: 24px;
+  cursor: pointer;
 }
 
 .tech-stack-title {
@@ -184,7 +180,6 @@
   background: #e0e0e0;
 }
 
-/* GitHub Stats Display */
 .github-stats {
   margin-top: 32px;
   padding-top: 24px;
@@ -225,8 +220,6 @@
   background: #e8e8e8;
 }
 
-/* Optional CSS adjustments to MyWork.css */
-
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -242,14 +235,13 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .my__work {
     padding: 80px 16px 16px;
   }
 
   .my__work h1 {
-    font-size: 36px;
+    font-size: 50px;
   }
 
   .project-card {

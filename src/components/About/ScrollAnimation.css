@@ -7,7 +7,6 @@
   position: relative;
 }
 
-/* Gradient overlays for smooth fade effect */
 .scroll-animation-container::before,
 .scroll-animation-container::after {
   content: "";
@@ -46,7 +45,6 @@
   }
 }
 
-/* Pause animation on hover */
 .scroll-animation-container:hover .scroll-track {
   animation-play-state: paused;
 }
@@ -82,7 +80,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .scroll-animation-container {
     padding: 24px 0;

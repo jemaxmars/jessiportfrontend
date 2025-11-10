@@ -27,7 +27,6 @@
   font-weight: 700;
 }
 
-/* About Card Container */
 .about-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -58,20 +57,19 @@
   color: #282c34;
 }
 
-/* Extra spacer between paragraphs */
 .paragraph-spacer {
   height: 1rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about {
     padding: 80px 16px 16px;
   }
 
   .about h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 24px;
+    margin-top: 50px;
   }
 
   .about-card {
@@ -91,7 +89,7 @@
   }
 
   .about h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
   }
 

@@ -20,8 +20,8 @@
   margin-top: 32px;
   text-align: center;
   text-transform: uppercase;
-  font-family: var(--font-neue-montreal);
-  font-size: 48px;
+  font-family: var(--font-pickyside);
+  font-size: 125px;
   font-weight: 700;
 }
 
@@ -44,7 +44,6 @@
 }
 
 .contact__link {
-  /* display: flex; */
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -85,7 +84,7 @@
 }
 
 .contact__link-name {
-  font-family: var(--font-cs-blacken);
+  font-family: var(--font-pickyside);
   font-size: 40px;
   font-weight: 700;
   margin: 8px 0 8px 0;
@@ -112,7 +111,7 @@
   }
 
   .contact h1 {
-    font-size: 36px;
+    font-size: 50px;
   }
 
   .contact__links {
