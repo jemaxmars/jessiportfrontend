@@ -45,21 +45,23 @@
 
 .contact__link {
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   padding: 24px;
   text-decoration: none;
   color: black;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(10px);
-  border: 2px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .contact__link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-  border-color: black;
 }
 
 .contact__icon {
