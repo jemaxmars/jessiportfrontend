@@ -5,6 +5,7 @@ import "./MyWork.css";
 function MyWork() {
   const [githubData, setGithubData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadGitHubData = async () => {
@@ -20,19 +21,23 @@ function MyWork() {
             stargazers_count: repo.stargazers_count,
             forks_count: repo.forks_count,
             html_url: repo.html_url,
+            language: repo.language,
           });
 
           dataMap[repo.name] = {
             stars: repo.stargazers_count,
             forks: repo.forks_count,
             url: repo.html_url,
+            language: repo.language,
           };
         });
 
         console.log("Final dataMap:", dataMap);
         setGithubData(dataMap);
+        setError(null);
       } catch (err) {
         console.error("Failed to load GitHub data:", err);
+        setError("Failed to load GitHub data");
       } finally {
         setLoading(false);
       }
@@ -106,6 +111,30 @@ function MyWork() {
     },
   ];
 
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="my__work">
+        <div className="my__work-container">
+          <h1>My Work</h1>
+          <div className="loading">Loading projects...</div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="my__work">
+        <div className="my__work-container">
+          <h1>My Work</h1>
+          <div className="error">{error}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="my__work">
       <div className="my__work-container">
@@ -178,6 +207,11 @@ function MyWork() {
                       <div className="github-stat-items">
                         <span className="github-stat">⭐ {repoData.stars}</span>
                         <span className="github-stat">🔱 {repoData.forks}</span>
+                        {repoData.language && (
+                          <span className="github-stat">
+                            💻 {repoData.language}
+                          </span>
+                        )}
                       </div>
                     </div>
                   )}
