@@ -53,11 +53,11 @@
 
 .nav__link {
   color: white;
-  font-family: var(--font-cs-blacken);
+  font-family: var(--font-pickyside);
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 45px;
   position: relative;
   /* Gradient text effect */
   background-image: linear-gradient(
