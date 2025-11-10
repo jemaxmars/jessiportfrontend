@@ -85,3 +85,30 @@ export async function fetchGitHubStats() {
     throw error;
   }
 }
+
+export async function fetchRepoDetails(repoName) {
+  try {
+    const cacheKey = `github_repo_${repoName}`;
+    const cached = getCachedData(cacheKey);
+    if (cached) {
+      console.log(`Using cached data for repo: ${repoName}`);
+      return cached;
+    }
+
+    console.log(`Fetching details for repo: ${repoName}`);
+    const response = await fetch(
+      `https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    setCachedData(cacheKey, data);
+    return data;
+  } catch (error) {
+    console.error(`Error fetching repo details for ${repoName}:`, error);
+    throw error;
+  }
+}
