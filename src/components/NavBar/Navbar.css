@@ -19,29 +19,25 @@
 .nav__logo {
   color: white;
   font-family: var(--font-neue-montreal);
+
   font-size: 40px;
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  background-image: linear-gradient(to right, white, #474747 50%, #808080 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   transition: all 0.3s ease-in-out;
 }
 
 .nav__logo:hover {
-  background-position: 0;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
   animation: glitch 0.4s infinite;
 }
 
 .nav__logo.active {
-  background-position: 0;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  animation: glitch 0.4s infinite;
 }
 
 .nav__menu {
@@ -73,6 +69,12 @@
 
 .nav__link:hover {
   background-position: 0;
+  background: transparent;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
+  animation: glitch 0.4s infinite;
 }
 
 .nav__link.active {
@@ -117,38 +119,38 @@
 @keyframes glitch {
   0% {
     text-shadow:
-      -2px 0 #ff00de,
-      2px 0 #3bac06;
+      -2px 0 #ffffff,
+      2px 0 #808080;
     transform: translateX(0);
   }
   20% {
     text-shadow:
-      -2px 0 #ff00de,
-      2px 0 #3bac06;
+      -2px 0 #ffffff,
+      2px 0 #808080;
     transform: translateX(-2px);
   }
   40% {
     text-shadow:
-      -2px 0 #3bac06,
-      2px 0 #ff00de;
+      -2px 0 #808080,
+      2px 0 #ffffff;
     transform: translateX(2px);
   }
   60% {
     text-shadow:
-      -2px 0 #ff00de,
-      2px 0 #3bac06;
+      -2px 0 #ffffff,
+      2px 0 #808080;
     transform: translateX(-2px);
   }
   80% {
     text-shadow:
-      -2px 0 #3bac06,
-      2px 0 #ff00de;
+      -2px 0 #808080,
+      2px 0 #ffffff;
     transform: translateX(2px);
   }
   100% {
     text-shadow:
-      -2px 0 #ff00de,
-      2px 0 #3bac06;
+      -2px 0 #ffffff,
+      2px 0 #808080;
     transform: translateX(0);
   }
 }
