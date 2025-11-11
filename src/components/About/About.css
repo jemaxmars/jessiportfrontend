@@ -38,15 +38,15 @@
   width: 100%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 16px 48px 0 rgb(255, 255, 255);
   transition: all 0.3s ease;
 }
 
 .about-card:hover {
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0);
 }
 
 .about-paragraph {
@@ -57,14 +57,13 @@
   font-family: var(--font-neue-montreal);
   font-size: 16px;
   line-height: 1.8;
-  color: #282c34;
+  color:black;
 }
 
 .paragraph-spacer {
   height: 1rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about {
     padding: 80px 16px 16px;
