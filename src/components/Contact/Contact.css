@@ -16,7 +16,7 @@
 
 .contact h1 {
   color: black;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
   margin-top: 32px;
   text-align: center;
   text-transform: uppercase;
@@ -27,7 +27,7 @@
 
 .contact__intro {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: black;
@@ -107,6 +107,20 @@
   color: black;
 }
 
+.contact__form-section {
+  margin-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact__form-title {
+  text-align: center;
+ font-family: var(--font-pickyside);
+  font-size: 125px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 80px 16px 16px;
@@ -137,5 +151,27 @@
 
   .contact__link-description {
     font-size: 16px;
+  }
+
+  .contact__form-section {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .contact__form-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__form-section {
+    margin-top: 32px;
+    padding-top: 24px;
+  }
+
+  .contact__form-title {
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 }

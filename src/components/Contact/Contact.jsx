@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "../ContactForm/ContactForm";
 import "./Contact.css";
 
 function Contact() {
@@ -16,10 +17,10 @@ function Contact() {
       description: "Connect with me professionally",
     },
     {
-      name: "Email",
-      url: "mailto:jemaxmars@icloud.com",
-      icon: "/Mail.png",
-      description: "Send me a message",
+      name: "Medium",
+      url: "https://medium.com/@coded_by_jessi",
+      icon: "/mediumIcon.png",
+      description: "Read my articles",
     },
     {
       name: "Twitter",
@@ -55,6 +56,11 @@ function Contact() {
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="contact__form-section">
+          <h2 className="contact__form-title">Send Me a Message</h2>
+          <ContactForm />
         </div>
       </div>
     </div>

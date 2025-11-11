@@ -1,0 +1,202 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: var(--font-neue-montreal);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  font-family: var(--font-neue-montreal);
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(0, 0, 0, 0.589);
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgb(54, 54, 54);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.281);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.form-input:disabled,
+.form-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-input.error,
+.form-textarea.error {
+  border: 2px solid rgba(255, 0, 116, 1);
+  background: rgba(211, 47, 47, 0.05);
+  color: rgba(0, 0, 0, 1);
+}
+
+.error-message {
+  font-family: var(--font-neue-montreal);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgb(201, 8, 95);
+  font-weight: 600;
+}
+
+.error-alert {
+  background: rgba(211, 47, 47, 0.1);
+  border: 2px solid rgb(226, 10, 108);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: rgb(226, 10, 108);
+  font-family: var(--font-neue-montreal);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.success-alert {
+  background:  rgba(255, 255, 255, 0.2);
+  border: 2px solid #3bac06;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: var(--font-neue-montreal);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.submit-button {
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 1);
+  font-family: var(--font-neue-montreal);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  outline: none;
+}
+
+button:hover:not(:disabled) {
+  outline: none;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: glitch 0.4s infinite;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow:
+      -2px 0 #ff00de,
+      2px 0 #3bac06;
+    transform: translateX(0);
+  }
+  20% {
+    text-shadow:
+      -2px 0 #ff00de,
+      2px 0 #3bac06;
+    transform: translateX(-2px);
+  }
+  40% {
+    text-shadow:
+      -2px 0 #3bac06,
+      2px 0 #ff00de;
+    transform: translateX(2px);
+  }
+  60% {
+    text-shadow:
+      -2px 0 #ff00de,
+      2px 0 #3bac06;
+    transform: translateX(-2px);
+  }
+  80% {
+    text-shadow:
+      -2px 0 #3bac06,
+      2px 0 #ff00de;
+    transform: translateX(2px);
+  }
+  100% {
+    text-shadow:
+      -2px 0 #ff00de,
+      2px 0 #3bac06;
+    transform: translateX(0);
+  }
+}
