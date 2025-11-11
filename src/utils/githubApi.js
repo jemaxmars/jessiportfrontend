@@ -1,33 +1,53 @@
 const GITHUB_USERNAME = "jemaxmars";
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
+const BASE_URL = "https://api.github.com";
+const CACHE_KEY = "github_data_cache";
+const CACHE_DURATION = 60 * 60 * 1000;
 
-function getCachedData(key) {
-  const cached = localStorage.getItem(key);
-  if (!cached) return null;
+const getCache = (key) => {
+  try {
+    const cached = localStorage.getItem(`${CACHE_KEY}_${key}`);
+    if (!cached) return null;
 
-  const { data, timestamp } = JSON.parse(cached);
-  if (Date.now() - timestamp > CACHE_DURATION) {
-    localStorage.removeItem(key);
+    const { data, timestamp } = JSON.parse(cached);
+    const isExpired = Date.now() - timestamp > CACHE_DURATION;
+
+    if (isExpired) {
+      localStorage.removeItem(`${CACHE_KEY}_${key}`);
+      return null;
+    }
+
+    console.log(`Using cached data for: ${key}`);
+    return data;
+  } catch (error) {
+    console.error("Cache read error:", error);
     return null;
   }
-  return data;
-}
+};
 
-function setCachedData(key, data) {
-  localStorage.setItem(
-    key,
-    JSON.stringify({
+const setCache = (key, data) => {
+  try {
+    const cacheData = {
       data,
       timestamp: Date.now(),
-    })
-  );
-}
+    };
+    localStorage.setItem(`${CACHE_KEY}_${key}`, JSON.stringify(cacheData));
+  } catch (error) {
+    console.error("Cache write error:", error);
+  }
+};
 
-export async function fetchUserRepos() {
+export async function fetchUserRepos(forceRefresh = false) {
+  const cacheKey = "repos";
+
+  if (!forceRefresh) {
+    const cached = getCache(cacheKey);
+    if (cached) return cached;
+  }
+
   try {
     console.log("Fetching GitHub repos for:", GITHUB_USERNAME);
     const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10&type=owner`
+      `${BASE_URL}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=10&type=owner`
     );
 
     if (!response.ok) {
@@ -35,15 +55,7 @@ export async function fetchUserRepos() {
     }
 
     const data = await response.json();
-    console.log("Full API response:", data);
-
-    if (data.length > 0) {
-      console.log(
-        "First repo ALL properties:",
-        JSON.stringify(data[0], null, 2)
-      );
-    }
-
+    setCache(cacheKey, data);
     return data;
   } catch (error) {
     console.error("Error fetching GitHub repositories:", error);
@@ -51,14 +63,20 @@ export async function fetchUserRepos() {
   }
 }
 
-export async function fetchUserProfile() {
+export async function fetchUserProfile(forceRefresh = false) {
+  const cacheKey = "profile";
+
+  if (!forceRefresh) {
+    const cached = getCache(cacheKey);
+    if (cached) return cached;
+  }
+
   try {
-    const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}`
-    );
+    const response = await fetch(`${BASE_URL}/users/${GITHUB_USERNAME}`);
     if (!response.ok) throw new Error("Failed to fetch profile");
 
     const data = await response.json();
+    setCache(cacheKey, data);
     return data;
   } catch (error) {
     console.error("Error fetching GitHub profile:", error);
@@ -66,10 +84,17 @@ export async function fetchUserProfile() {
   }
 }
 
-export async function fetchGitHubStats() {
+export async function fetchGitHubStats(forceRefresh = false) {
+  const cacheKey = "stats";
+
+  if (!forceRefresh) {
+    const cached = getCache(cacheKey);
+    if (cached) return cached;
+  }
+
   try {
-    const profile = await fetchUserProfile();
-    return {
+    const profile = await fetchUserProfile(forceRefresh);
+    const stats = {
       name: profile.name,
       bio: profile.bio,
       location: profile.location,
@@ -80,24 +105,26 @@ export async function fetchGitHubStats() {
       profileUrl: profile.html_url,
       blogUrl: profile.blog,
     };
+    setCache(cacheKey, stats);
+    return stats;
   } catch (error) {
     console.error("Error fetching GitHub stats:", error);
     throw error;
   }
 }
 
-export async function fetchRepoDetails(repoName) {
-  try {
-    const cacheKey = `github_repo_${repoName}`;
-    const cached = getCachedData(cacheKey);
-    if (cached) {
-      console.log(`Using cached data for repo: ${repoName}`);
-      return cached;
-    }
+export async function fetchRepoDetails(repoName, forceRefresh = false) {
+  const cacheKey = `repo_${repoName}`;
 
+  if (!forceRefresh) {
+    const cached = getCache(cacheKey);
+    if (cached) return cached;
+  }
+
+  try {
     console.log(`Fetching details for repo: ${repoName}`);
     const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}`
+      `${BASE_URL}/repos/${GITHUB_USERNAME}/${repoName}`
     );
 
     if (!response.ok) {
@@ -105,7 +132,7 @@ export async function fetchRepoDetails(repoName) {
     }
 
     const data = await response.json();
-    setCachedData(cacheKey, data);
+    setCache(cacheKey, data);
     return data;
   } catch (error) {
     console.error(`Error fetching repo details for ${repoName}:`, error);
