@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import './ContactForm.css';
+import React, { useState } from "react";
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
 
   const validateForm = () => {
     const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!formData.email.includes('@')) {
-      newErrors.email = 'Valid email is required';
+      newErrors.email = "Email is required";
+    } else if (!formData.email.includes("@")) {
+      newErrors.email = "Valid email is required";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = "Message must be at least 10 characters";
     }
 
     return newErrors;
@@ -43,14 +43,14 @@ const ContactForm = () => {
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
-        [name]: '',
+        [name]: "",
       }));
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccessMessage('');
+    setSuccessMessage("");
 
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
@@ -61,15 +61,29 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      console.log('Form submitted:', formData);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("http://localhost:5000/api/contact/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      setSuccessMessage('Thank you! Your message has been sent successfully.');
-      setFormData({ name: '', email: '', message: '' });
-      setErrors({});
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccessMessage(data.message);
+        setFormData({ name: "", email: "", message: "" });
+        setErrors({});
+      } else {
+        setErrors({ submit: data.message || "Failed to send message" });
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setErrors({ submit: 'Failed to send message. Please try again.' });
+      console.error("Error submitting form:", error);
+      setErrors({
+        submit:
+          "Failed to send message. Make sure the backend is running on http://localhost:5000",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -88,7 +102,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           placeholder="Your name"
-          className={`form-input ${errors.name ? 'error' : ''}`}
+          className={`form-input ${errors.name ? "error" : ""}`}
           disabled={isSubmitting}
         />
         {errors.name && <span className="error-message">{errors.name}</span>}
@@ -105,7 +119,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="your@email.com"
-          className={`form-input ${errors.email ? 'error' : ''}`}
+          className={`form-input ${errors.email ? "error" : ""}`}
           disabled={isSubmitting}
         />
         {errors.email && <span className="error-message">{errors.email}</span>}
@@ -121,7 +135,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Your message here..."
-          className={`form-textarea ${errors.message ? 'error' : ''}`}
+          className={`form-textarea ${errors.message ? "error" : ""}`}
           disabled={isSubmitting}
           rows="6"
         />
@@ -130,20 +144,12 @@ const ContactForm = () => {
         )}
       </div>
 
-      {errors.submit && (
-        <div className="error-alert">{errors.submit}</div>
-      )}
+      {errors.submit && <div className="error-alert">{errors.submit}</div>}
 
-      {successMessage && (
-        <div className="success-alert">{successMessage}</div>
-      )}
+      {successMessage && <div className="success-alert">{successMessage}</div>}
 
-      <button
-        type="submit"
-        className="submit-button"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+      <button type="submit" className="submit-button" disabled={isSubmitting}>
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

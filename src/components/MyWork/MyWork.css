@@ -59,7 +59,7 @@
   transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .project-image {
