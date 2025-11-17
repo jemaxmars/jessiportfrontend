@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { submitContactForm } from "../../utils/contactApi";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -61,15 +62,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
+      const data = await submitContactForm(formData);
 
       if (data.success) {
         setSuccessMessage(data.message);
