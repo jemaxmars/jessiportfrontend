@@ -19,14 +19,13 @@
 .about h1 {
   color: black;
   margin-bottom: 32px;
-  margin-top: 32px;
+  margin-top: 75px;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--font-pickyside);
   font-size: 130px;
   font-weight: 700;
 }
-
 
 .about-card {
   background: rgba(255, 255, 255, 0.15);
@@ -57,21 +56,32 @@
   font-family: var(--font-neue-montreal);
   font-size: 16px;
   line-height: 1.8;
-  color:black;
+  color: black;
 }
 
 .paragraph-spacer {
   height: 1rem;
 }
 
+.about-github-stats-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.about-stat-number {
+  font-size: 50px;
+}
+
+/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .about {
     padding: 80px 16px 16px;
   }
 
   .about h1 {
-    font-size: 48px;
+    font-size: 88px;
     margin-bottom: 24px;
+    margin-top: 80px;
   }
 
   .about-card {
@@ -84,21 +94,58 @@
     background: rgba(255, 255, 255, 0.18);
   }
 
-  .about-paragraph p {
-    font-size: 14px;
-    line-height: 1.7;
+  .about-github-stats {
+    gap: 10px;
+  }
+
+  .github-stat {
+    font-size: 20px;
+    padding: 8px 14px;
   }
 }
 
+/* Small tablets and large phones (600px and below) */
+@media (max-width: 600px) {
+  .about {
+    padding: 70px 14px 14px;
+  }
+
+  .about h1 {
+    font-size: 88px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+
+  .about-card {
+    padding: 28px 20px;
+    background: rgba(255, 255, 255, 0.11);
+  }
+
+  .about-card:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .about-github-stats {
+    gap: 8px;
+  }
+
+  .github-stat {
+    font-size: 20px;
+    padding: 7px 12px;
+  }
+}
+
+/* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   .about {
     padding: 60px 12px 12px;
   }
 
   .about h1 {
-    font-size: 50px;
+    font-size: 88px;
     margin: 53px;
     margin-bottom: 34px;
+    margin-top: 80px;
   }
 
   .about-card {
@@ -110,7 +157,47 @@
     background: rgba(255, 255, 255, 0.15);
   }
 
-  .about-paragraph p {
-    font-size: 13px;
+  .about-github-stats {
+    gap: 6px;
+  }
+
+  .github-stat {
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 16px;
+  }
+}
+
+/* Small phones (360px and below) */
+@media (max-width: 360px) {
+  .about {
+    padding: 55px 10px 10px;
+  }
+
+  .about h1 {
+    font-size: 88px;
+    margin: 40px;
+    margin-bottom: 24px;
+    margin-top: 80px;
+  }
+
+  .about-card {
+    padding: 20px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.09);
+  }
+
+  .about-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .about-github-stats {
+    gap: 4px;
+  }
+
+  .github-stat {
+    font-size: 9px;
+    padding: 5px 8px;
+    border-radius: 14px;
   }
 }

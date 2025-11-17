@@ -83,7 +83,15 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form
+      className="contact-form"
+      onSubmit={handleSubmit}
+      aria-labelledby="contact-form-title"
+    >
+      <h2 id="contact-form-title" className="sr-only">
+        Contact Me
+      </h2>
+
       <div className="form-group">
         <label htmlFor="name" className="form-label">
           Name
@@ -97,8 +105,15 @@ const ContactForm = () => {
           placeholder="Your name"
           className={`form-input ${errors.name ? "error" : ""}`}
           disabled={isSubmitting}
+          aria-required="true"
+          aria-invalid={errors.name ? "true" : "false"}
+          aria-describedby={errors.name ? "name-error" : undefined}
         />
-        {errors.name && <span className="error-message">{errors.name}</span>}
+        {errors.name && (
+          <span id="name-error" className="error-message" role="alert">
+            {errors.name}
+          </span>
+        )}
       </div>
 
       <div className="form-group">
@@ -114,8 +129,15 @@ const ContactForm = () => {
           placeholder="your@email.com"
           className={`form-input ${errors.email ? "error" : ""}`}
           disabled={isSubmitting}
+          aria-required="true"
+          aria-invalid={errors.email ? "true" : "false"}
+          aria-describedby={errors.email ? "email-error" : undefined}
         />
-        {errors.email && <span className="error-message">{errors.email}</span>}
+        {errors.email && (
+          <span id="email-error" className="error-message" role="alert">
+            {errors.email}
+          </span>
+        )}
       </div>
 
       <div className="form-group">
@@ -131,17 +153,35 @@ const ContactForm = () => {
           className={`form-textarea ${errors.message ? "error" : ""}`}
           disabled={isSubmitting}
           rows="6"
+          aria-required="true"
+          aria-invalid={errors.message ? "true" : "false"}
+          aria-describedby={errors.message ? "message-error" : undefined}
         />
         {errors.message && (
-          <span className="error-message">{errors.message}</span>
+          <span id="message-error" className="error-message" role="alert">
+            {errors.message}
+          </span>
         )}
       </div>
 
-      {errors.submit && <div className="error-alert">{errors.submit}</div>}
+      {errors.submit && (
+        <div className="error-alert" role="alert" aria-live="assertive">
+          {errors.submit}
+        </div>
+      )}
 
-      {successMessage && <div className="success-alert">{successMessage}</div>}
+      {successMessage && (
+        <div className="success-alert" role="status" aria-live="polite">
+          {successMessage}
+        </div>
+      )}
 
-      <button type="submit" className="submit-button" disabled={isSubmitting}>
+      <button
+        type="submit"
+        className="submit-button"
+        disabled={isSubmitting}
+        aria-busy={isSubmitting}
+      >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
