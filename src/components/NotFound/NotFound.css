@@ -1,0 +1,160 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../assets/greekAngelStatue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 96px 32px 32px;
+}
+
+.not-found__container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 64px 48px;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.not-found__title {
+  font-family: var(--font-pickyside);
+  font-size: 120px;
+  font-weight: 700;
+  color: black;
+  margin: 0 0 16px 0;
+}
+
+.not-found__text {
+  font-family: var(--font-neue-montreal);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  margin: 0 0 32px 0;
+}
+
+.not-found__link {
+  display: inline-block;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: black;
+  font-family: var(--font-neue-montreal);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.not-found__link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet breakpoint (768px and below) */
+@media (max-width: 768px) {
+  .not-found {
+    padding: 80px 16px 16px;
+  }
+
+  .not-found__container {
+    padding: 48px 32px;
+  }
+
+  .not-found__title {
+    font-size: 88px;
+  }
+
+  .not-found__text {
+    font-size: 20px;
+  }
+
+  .not-found__link {
+    font-size: 14px;
+    padding: 12px 28px;
+  }
+}
+
+/* Small tablets and large phones (600px and below) */
+@media (max-width: 600px) {
+  .not-found {
+    padding: 70px 14px 14px;
+  }
+
+  .not-found__container {
+    padding: 40px 24px;
+  }
+
+  .not-found__title {
+    font-size: 72px;
+  }
+
+  .not-found__text {
+    font-size: 18px;
+  }
+
+  .not-found__link {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .not-found {
+    padding: 60px 12px 12px;
+  }
+
+  .not-found__container {
+    padding: 32px 20px;
+  }
+
+  .not-found__title {
+    font-size: 60px;
+  }
+
+  .not-found__text {
+    font-size: 16px;
+  }
+
+  .not-found__link {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
+/* Small phones (360px and below) */
+@media (max-width: 360px) {
+  .not-found {
+    padding: 55px 10px 10px;
+  }
+
+  .not-found__container {
+    padding: 28px 16px;
+  }
+
+  .not-found__title {
+    font-size: 50px;
+  }
+
+  .not-found__text {
+    font-size: 14px;
+  }
+
+  .not-found__link {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
