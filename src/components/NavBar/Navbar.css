@@ -274,38 +274,38 @@
 @keyframes glitch {
   0% {
     text-shadow:
-      -2px 0 #ffffff,
-      2px 0 #808080;
+      -2px 0 #ff00ff,
+      2px 0 #00ff00;
     transform: translateX(0);
   }
   20% {
     text-shadow:
-      -2px 0 #ffffff,
-      2px 0 #808080;
+      -2px 0 #ff00ff,
+      2px 0 #00ff00;
     transform: translateX(-2px);
   }
   40% {
     text-shadow:
-      -2px 0 #808080,
-      2px 0 #ffffff;
+      -2px 0 #00ff00,
+      2px 0 #ff00ff;
     transform: translateX(2px);
   }
   60% {
     text-shadow:
-      -2px 0 #ffffff,
-      2px 0 #808080;
+      -2px 0 #ff00ff,
+      2px 0 #00ff00;
     transform: translateX(-2px);
   }
   80% {
     text-shadow:
-      -2px 0 #808080,
-      2px 0 #ffffff;
+      -2px 0 #00ff00,
+      2px 0 #ff00ff;
     transform: translateX(2px);
   }
   100% {
     text-shadow:
-      -2px 0 #ffffff,
-      2px 0 #808080;
+      -2px 0 #ff00ff,
+      2px 0 #00ff00;
     transform: translateX(0);
   }
 }
