@@ -239,7 +239,6 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .my__work {
     padding: 80px 16px 16px;
@@ -264,7 +263,6 @@
   }
 }
 
-/* Small tablets and large phones (600px and below) */
 @media (max-width: 600px) {
   .my__work {
     padding: 70px 14px 14px;
@@ -293,7 +291,6 @@
   }
 }
 
-/* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   .my__work {
     padding: 60px 12px 12px;
@@ -340,7 +337,6 @@
   }
 }
 
-/* Small phones (360px and below) */
 @media (max-width: 360px) {
   .my__work {
     padding: 55px 10px 10px;

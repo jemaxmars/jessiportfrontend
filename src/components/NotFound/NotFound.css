@@ -64,7 +64,6 @@
   animation: glitch 0.4s infinite;
 }
 
-/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .not-found {
     padding: 80px 16px 16px;
@@ -88,7 +87,6 @@
   }
 }
 
-/* Small tablets and large phones (600px and below) */
 @media (max-width: 600px) {
   .not-found {
     padding: 70px 14px 14px;
@@ -112,7 +110,6 @@
   }
 }
 
-/* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   .not-found {
     padding: 60px 12px 12px;
@@ -136,7 +133,6 @@
   }
 }
 
-/* Small phones (360px and below) */
 @media (max-width: 360px) {
   .not-found {
     padding: 55px 10px 10px;
@@ -160,7 +156,6 @@
   }
 }
 
-/* Glitch animation - Pink (#ff00ff) and Green (#00ff00) */
 @keyframes glitch {
   0% {
     text-shadow:

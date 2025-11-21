@@ -77,7 +77,6 @@
   animation: glitch 0.4s infinite;
 }
 
-/* Active link with glitch animation on both desktop and mobile */
 .nav__link.active {
   background-position: 0;
   background: transparent;
@@ -89,7 +88,6 @@
   animation: glitch 0.4s infinite;
 }
 
-/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .nav__container {
     padding: 15px 15px 15px 15px;
@@ -134,7 +132,6 @@
   }
 }
 
-/* Medium phones (600px and below) */
 @media (max-width: 600px) {
   .nav__container {
     padding: 0 16px;
@@ -185,7 +182,6 @@
   }
 }
 
-/* Small devices - phones (480px and below) */
 @media (max-width: 480px) {
   .nav__container {
     padding: 0 12px;
@@ -238,7 +234,6 @@
   }
 }
 
-/* Extra small devices - small phones (360px and below) */
 @media (max-width: 360px) {
   .nav__container {
     padding: 0 8px;

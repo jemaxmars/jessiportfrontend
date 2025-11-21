@@ -3,7 +3,7 @@
 > A modern, fully-responsive portfolio website showcasing projects, skills, and contact capabilities. Built with **React**, **Vite**, and custom **CSS3**—demonstrating full-stack development proficiency with a focus on clean architecture, performance, and user experience.
 
 **Live Site:** [codedbyjessi.com](https://codedbyjessi.com)  
-**Backend API:** [jessiportbackend](https://github.com/jemaxmars/jessiportbackend)  
+**Backend Repo:** [jessiportbackend](https://github.com/jemaxmars/jessiportbackend)  
 **Frontend Repo:** [jessiportfrontend](https://github.com/jemaxmars/jessiportfrontend)
 
 ---
@@ -140,8 +140,11 @@ App (Root)
 ├── MyWork (Projects Showcase)
 ├── Contact (Contact Section)
 │   └── ContactForm (Form Submission)
+├── NotFound (404 Page)
 └── [Scroll sections]
 ```
+
+
 
 ### Data Flow
 
@@ -204,9 +207,6 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
-
-```
 jessiportfrontend/
 │
 ├── src/
@@ -241,9 +241,13 @@ jessiportfrontend/
 │   │   │   ├── Contact.jsx          # Contact information section
 │   │   │   └── Contact.css          # Contact section styling
 │   │   │
-│   │   └── ContactForm/
-│   │       ├── ContactForm.jsx      # Form component
-│   │       └── ContactForm.css      # Form styling
+│   │   ├── ContactForm/
+│   │   │   ├── ContactForm.jsx      # Form component
+│   │   │   └── ContactForm.css      # Form styling
+│   │   │
+│   │   └── NotFound/
+│   │       ├── NotFound.jsx         # 404 Not Found page component
+│   │       └── NotFound.css         # 404 page styling
 │   │
 │   ├── utils/
 │   │   └── githubApi.js             # GitHub API utility functions
@@ -267,9 +271,6 @@ jessiportfrontend/
 ├── .gitignore                       # Git exclusions
 ├── package.json                     # Dependencies & scripts
 └── README.md                        # This file
-```
-
----
 
 ## 🧩 Components Deep Dive
 
@@ -424,6 +425,17 @@ const handleSubmit = async (e) => {
     setErrors({ submit: "Submission failed" });
   }
 };
+```
+
+### 6. **NotFound Component**
+
+The `NotFound` component provides a custom, styled 404 page for any route that does not exist.  
+**To see it in action:** try navigating to a non-existent route, such as [`/thispagedoesnotexist`](https://codedbyjessi.com/thispagedoesnotexist).
+
+**How it works:**  
+In the router configuration, the NotFound component is rendered for all unmatched routes:
+```jsx
+<Route path="*" element={<NotFound />} />
 ```
 
 ---
@@ -761,9 +773,9 @@ Have questions or feedback? Reach out!
 
 ### Quick Links
 
-- [GitHub Repository](https://github.com/jemaxmars/jessiportfrontend)
+- [Frontend Repository](https://github.com/jemaxmars/jessiportfrontend)
 - [Live Portfolio](https://codedbyjessi.com)
-- [Backend API](https://github.com/jemaxmars/jessiportbackend)
+- [Backend Repository](https://github.com/jemaxmars/jessiportbackend)
 
 ---
 

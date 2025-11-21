@@ -72,7 +72,6 @@
   font-size: 50px;
 }
 
-/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .about {
     padding: 80px 16px 16px;
@@ -104,7 +103,6 @@
   }
 }
 
-/* Small tablets and large phones (600px and below) */
 @media (max-width: 600px) {
   .about {
     padding: 70px 14px 14px;
@@ -135,7 +133,6 @@
   }
 }
 
-/* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   .about {
     padding: 60px 12px 12px;
@@ -168,7 +165,6 @@
   }
 }
 
-/* Small phones (360px and below) */
 @media (max-width: 360px) {
   .about {
     padding: 55px 10px 10px;

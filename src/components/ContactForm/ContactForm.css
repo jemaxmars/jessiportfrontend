@@ -189,7 +189,6 @@ button:hover:not(:disabled) {
   }
 }
 
-/* Tablet breakpoint (768px and below) */
 @media (max-width: 768px) {
   .contact-form {
     gap: 20px;
@@ -206,7 +205,6 @@ button:hover:not(:disabled) {
   }
 }
 
-/* Small tablets and large phones (600px and below) */
 @media (max-width: 600px) {
   .contact-form {
     gap: 20px;
@@ -232,7 +230,6 @@ button:hover:not(:disabled) {
   }
 }
 
-/* Mobile phones (480px and below) */
 @media (max-width: 480px) {
   .contact-form {
     gap: 16px;
@@ -268,7 +265,6 @@ button:hover:not(:disabled) {
   }
 }
 
-/* Small phones (360px and below) */
 @media (max-width: 360px) {
   .contact-form {
     gap: 14px;
