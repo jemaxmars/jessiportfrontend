@@ -20,6 +20,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <div className="footer-spacer" />
       <footer className="footer">
         <p>&copy; Jessi Marshall 2025</p>
       </footer>
