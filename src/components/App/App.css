@@ -1,29 +1,7 @@
-.footer {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: auto;
-  border-top: 1px solid #333;
-}
-
-.footer-spacer {
-  height: 220px; 
-  background: transparent;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 18px;
-  opacity: 0.8;
-  font-family: var(--font-neue-montreal);
-  text-transform: uppercase;
-}
-
-main {
+/* main {
   flex: 1;
   min-height: calc(100vh - 120px); 
-}
+} */
 
 
 #root {

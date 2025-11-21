@@ -111,6 +111,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   outline: none;
+  margin-bottom: 150px;
 }
 
 button:hover:not(:disabled) {

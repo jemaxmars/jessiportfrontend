@@ -34,9 +34,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  /* padding-bottom: 150px; */
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: black;
 }
 

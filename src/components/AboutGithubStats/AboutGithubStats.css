@@ -6,6 +6,7 @@
   max-width: 800px;
   width: 100%;
   margin-top: 48px;
+          margin-bottom: 150px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 16px 48px 0 rgb(255, 255, 255);
