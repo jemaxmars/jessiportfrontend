@@ -5,6 +5,7 @@ import About from "../About/About";
 import MyWork from "../MyWork/MyWork";
 import Contact from "../Contact/Contact";
 import NotFound from "../NotFound/NotFound";
+import Footer from "../Footer/Footer"; // Import the new Footer component
 import "./App.css";
 
 function App() {
@@ -20,10 +21,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <div className="footer-spacer" />
-      <footer className="footer">
-        <p>&copy; Jessi Marshall 2025</p>
-      </footer>
+      <Footer />
     </>
   );
 }
