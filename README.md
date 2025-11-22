@@ -13,6 +13,7 @@
 **Status:** Coming Soon 🎬
 
 A full walkthrough demo video showcasing:
+
 - ✨ Portfolio website features and design
 - 🔄 Contact form submission workflow
 - 📊 GitHub API integration in action
@@ -144,8 +145,6 @@ App (Root)
 └── [Scroll sections]
 ```
 
-
-
 ### Data Flow
 
 ```
@@ -210,67 +209,71 @@ npm run dev
 jessiportfrontend/
 │
 ├── src/
-│   ├── components/
-│   │   ├── App/
-│   │   │   ├── App.jsx              # Root component wrapper
-│   │   │   └── App.css              # Global app styles
-│   │   │
-│   │   ├── NavBar/
-│   │   │   ├── Navbar.jsx           # Navigation component
-│   │   │   └── Navbar.css           # Nav styling with mobile menu
-│   │   │
-│   │   ├── Home/
-│   │   │   ├── Home.jsx             # Landing page
-│   │   │   └── Home.css             # Landing page styling & animations
-│   │   │
-│   │   ├── About/
-│   │   │   ├── About.jsx            # About section
-│   │   │   ├── About.css            # Section styling
-│   │   │   ├── ScrollAnimation.jsx  # Intersection Observer component
-│   │   │   └── ScrollAnimation.css  # Fade-in animation styles
-│   │   │
-│   │   ├── AboutGithubStats/
-│   │   │   ├── AboutGithubStats.jsx # GitHub API integration
-│   │   │   └── AboutGithubStats.css # Stats display styling
-│   │   │
-│   │   ├── MyWork/
-│   │   │   ├── MyWork.jsx           # Projects showcase section
-│   │   │   └── MyWork.css           # Project card styling
-│   │   │
-│   │   ├── Contact/
-│   │   │   ├── Contact.jsx          # Contact information section
-│   │   │   └── Contact.css          # Contact section styling
-│   │   │
-│   │   ├── ContactForm/
-│   │   │   ├── ContactForm.jsx      # Form component
-│   │   │   └── ContactForm.css      # Form styling
-│   │   │
-│   │   └── NotFound/
-│   │       ├── NotFound.jsx         # 404 Not Found page component
-│   │       └── NotFound.css         # 404 page styling
-│   │
-│   ├── utils/
-│   │   └── githubApi.js             # GitHub API utility functions
-│   │
-│   ├── vendor/
-│   │   ├── fonts.css                # Custom font imports
-│   │   ├── normalize.css            # CSS reset
-│   │   └── fonts/                   # Font files
-│   │
-│   ├── assets/                      # Images, icons, static files
-│   │
-│   ├── index.css                    # Global styles
-│   ├── index.js                     # Entry point
-│   └── main.jsx                     # React root
+│ ├── components/
+│ │ ├── App/
+│ │ │ ├── App.jsx # Root component wrapper
+│ │ │ └── App.css # Global app styles
+│ │ │
+│ │ ├── NavBar/
+│ │ │ ├── Navbar.jsx # Navigation component
+│ │ │ └── Navbar.css # Nav styling with mobile menu
+│ │ │
+│ │ ├── Home/
+│ │ │ ├── Home.jsx # Landing page
+│ │ │ └── Home.css # Landing page styling & animations
+│ │ │
+│ │ ├── About/
+│ │ │ ├── About.jsx # About section
+│ │ │ ├── About.css # Section styling
+│ │ │ ├── ScrollAnimation.jsx # Intersection Observer component
+│ │ │ └── ScrollAnimation.css # Fade-in animation styles
+│ │ │
+│ │ ├── AboutGithubStats/
+│ │ │ ├── AboutGithubStats.jsx # GitHub API integration
+│ │ │ └── AboutGithubStats.css # Stats display styling
+│ │ │
+│ │ ├── MyWork/
+│ │ │ ├── MyWork.jsx # Projects showcase section
+│ │ │ └── MyWork.css # Project card styling
+│ │ │
+│ │ ├── Contact/
+│ │ │ ├── Contact.jsx # Contact information section
+│ │ │ └── Contact.css # Contact section styling
+│ │ │
+│ │ ├── ContactForm/
+│ │ │ ├── ContactForm.jsx # Form component
+│ │ │ └── ContactForm.css # Form styling
+│ │ │
+│ │ ├── Footer/
+│ │ │ ├── Footer.jsx # Footer component
+│ │ │ └── Footer.css # Footer styling
+│ │ │
+│ │ └── NotFound/
+│ │ ├── NotFound.jsx # 404 Not Found page component
+│ │ └── NotFound.css # 404 page styling
+│ │
+│ ├── utils/
+│ │ └── githubApi.js # GitHub API utility functions
+│ │
+│ ├── vendor/
+│ │ ├── fonts.css # Custom font imports
+│ │ ├── normalize.css # CSS reset
+│ │ └── fonts/ # Font files
+│ │
+│ ├── assets/ # Images, icons, static files
+│ │
+│ ├── index.css # Global styles
+│ ├── index.js # Entry point
+│ └── main.jsx # React root
 │
-├── public/                          # Static files (favicon, robots.txt)
-├── index.html                       # HTML template
-├── vite.config.js                   # Vite configuration
-├── .eslintrc.json                   # ESLint rules
-├── .prettierignore                  # Prettier exclusions
-├── .gitignore                       # Git exclusions
-├── package.json                     # Dependencies & scripts
-└── README.md                        # This file
+├── public/ # Static files (favicon, robots.txt)
+├── index.html # HTML template
+├── vite.config.js # Vite configuration
+├── .eslintrc.json # ESLint rules
+├── .prettierignore # Prettier exclusions
+├── .gitignore # Git exclusions
+├── package.json # Dependencies & scripts
+└── README.md # This file
 
 ## 🧩 Components Deep Dive
 
@@ -434,6 +437,7 @@ The `NotFound` component provides a custom, styled 404 page for any route that d
 
 **How it works:**  
 In the router configuration, the NotFound component is rendered for all unmatched routes:
+
 ```jsx
 <Route path="*" element={<NotFound />} />
 ```
@@ -546,7 +550,6 @@ export const fetchGithubUser = async (username) => {
 - **Vendor Styles** (`vendor/`) - Normalize.css, custom fonts
 - **Component Styles** - Scoped CSS per component (Component.jsx + Component.css)
 
-
 ## ⚡ Performance & Optimization
 
 ### Bundle Analysis
@@ -606,7 +609,6 @@ const About = React.lazy(() => import("./components/About"));
 - Tablet: 480px - 1023px
 - Desktop: 1024px
 ```
-
 
 ## ✅ Code Quality
 

@@ -5,7 +5,7 @@ import About from "../About/About";
 import MyWork from "../MyWork/MyWork";
 import Contact from "../Contact/Contact";
 import NotFound from "../NotFound/NotFound";
-import Footer from "../Footer/Footer"; // Import the new Footer component
+import Footer from "../Footer/Footer";
 import "./App.css";
 
 function App() {
