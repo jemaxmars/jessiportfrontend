@@ -1,0 +1,195 @@
+.contact {
+  padding: 96px 32px 32px;
+  min-height: 100vh;
+  background-image: url("../../assets/greekAngelStatue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h1 {
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-pickyside);
+  font-size: 125px;
+  font-weight: 700;
+}
+
+.contact__intro {
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 48px;
+  font-family: var(--font-neue-montreal);
+}
+
+.contact__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-right: 15px;
+}
+
+.contact__link {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.contact__link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.contact__icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact__link-content {
+  text-align: left;
+  flex: 1;
+}
+
+.contact__link-name {
+  font-family: var(--font-pickyside);
+  font-size: 40px;
+  font-weight: 700;
+  margin: 8px 0 8px 0;
+  text-transform: uppercase;
+  color: black;
+}
+
+.contact__link-description {
+  font-family: var(--font-neue-montreal);
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0;
+  color: gray;
+  line-height: 1.4;
+}
+
+.contact__link-description:hover {
+  color: black;
+}
+
+.contact__form-section {
+  margin-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact__form-title {
+  text-align: center;
+  font-family: var(--font-pickyside);
+  font-size: 125px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 16px 16px;
+  }
+
+  .contact h1 {
+    font-size: 88px;
+    margin-bottom: 24px;
+    margin-top: 80px;
+  }
+
+  .contact__form-title {
+    font-size: 88px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 70px 14px 14px;
+  }
+
+  .contact h1 {
+    font-size: 88px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+
+  .contact__form-title {
+    font-size: 88px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 60px 12px 12px;
+  }
+
+  .contact h1 {
+    font-size: 88px;
+    line-height: 1;
+    margin: 53px;
+    margin-bottom: 34px;
+    margin-top: 80px;
+    padding-top: 30px;
+  }
+
+  .contact__form-title {
+    font-size: 88px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact {
+    padding: 55px 10px 10px;
+  }
+
+  .contact h1 {
+    font-size: 88px;
+    margin: 40px;
+    margin-bottom: 24px;
+    margin-top: 80px;
+    padding-top: 30px;
+  }
+
+  .contact__form-title {
+    font-size: 88px;
+    line-height: 1;
+  }
+}

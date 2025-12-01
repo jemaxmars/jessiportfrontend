@@ -1,0 +1,75 @@
+.home__container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../../assets/greekAngelStatue.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
+}
+
+.intro {
+  max-width: 800px;
+}
+
+.head__line {
+  font-family: var(--font-pickyside);
+  font-size: 135px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sub-head__line {
+  font-family: var(--font-neue-montreal);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-family: var(--font-neue-montreal);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 768px) {
+  .head__line {
+    margin-top: 210px;
+  }
+
+  .sub-head__line {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .head__line {
+    margin-top: 210px;
+  }
+
+  .sub-head__line {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .head__line {
+    margin-top: 210px;
+  }
+}
+
+@media (max-width: 360px) {
+  .head__line {
+    margin-top: 210px;
+  }
+
+  .sub-head__line {
+    margin-bottom: 40px;
+  }
+}
