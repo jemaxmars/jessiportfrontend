@@ -74,8 +74,7 @@ const ContactForm = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       setErrors({
-        submit:
-          "Failed to send message. Make sure the backend is running on http://localhost:5000",
+        submit: "Failed to send message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
