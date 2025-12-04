@@ -20,17 +20,18 @@ function About() {
 
           <div className="about-paragraph">
             <p>
-              My journey began in a technical high school, where I studied IT
-              and graphic design for two years. That early exposure to tech
-              planted the seed, but it was my passion for design and
-              problem-solving that kept it growing. Before stepping into
-              software development, I spent over a decade in healthcare, as a
-              nursing assistant, working everywhere from psychiatric facilities
-              to hospitals. I started college prerequisites with the intention
-              of pursuing a nursing degree, but ultimately chose a different
-              path. These experiences taught me how to listen, adapt, and solve
-              real problems under pressure. I've seen the human side of systems
-              and now I build digital ones with empathy and precision.
+              My journey began in a technical high school, where I studied
+              Information Systems Technology and graphic design for two years.
+              That early exposure to tech planted the seed, but it was my
+              passion for design and problem-solving that kept it growing.
+              Before stepping into software development, I spent over a decade
+              in healthcare, as a nursing assistant, working everywhere from
+              psychiatric facilities to hospitals. I started college
+              prerequisites with the intention of pursuing a nursing degree, but
+              ultimately chose a different path. These experiences taught me how
+              to listen, adapt, and solve real problems under pressure. I've
+              seen the human side of systems and now I build digital ones with
+              empathy and precision.
             </p>
           </div>
           <div className="paragraph-spacer"></div>

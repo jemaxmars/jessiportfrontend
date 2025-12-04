@@ -118,7 +118,6 @@ button:hover:not(:disabled) {
   outline: none;
 }
 
-/* Focus indicator for button - ACCESSIBILITY */
 .submit-button:focus {
   outline: 3px solid rgba(0, 0, 0, 1);
   outline-offset: 2px;

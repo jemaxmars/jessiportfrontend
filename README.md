@@ -10,7 +10,7 @@
 
 ## 📹 Screencast Demo
 
-**Status:** Coming Soon 🎬
+**🎬 Watch the Full Demo:** [https://youtu.be/VuJ3oTdDXoM](https://youtu.be/VuJ3oTdDXoM)
 
 A full walkthrough demo video showcasing:
 
@@ -21,7 +21,7 @@ A full walkthrough demo video showcasing:
 - ⚡ Performance metrics and optimization
 - 🎯 Full-stack integration (frontend → backend → MongoDB)
 
-Check back soon for the complete screencast demonstration!
+Perfect for understanding the complete development process and seeing the live application in action!
 
 ---
 
